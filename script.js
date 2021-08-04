@@ -7,7 +7,8 @@ document.querySelector('.busca').addEventListener('submit', (event) => {
         showWarning('Carregando...')
     }
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid={API key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=0a84118ed59203ff29a1862eeb400753
+    `;
 
 });
 
