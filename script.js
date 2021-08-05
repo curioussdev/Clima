@@ -14,7 +14,12 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
 
         if(json.cod === 200) {
             showInfo({
-                
+                name: json.name,
+                country: json.sys.country,
+                temp: json.main.temp,
+                temIcon: json.weather[0].icon,
+                windSpeed: json.wind.speed,
+                windAngle: json.wind.angle
             });
         } else {
             showWarning('Não encontramos esta localização...')
