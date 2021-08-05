@@ -73,7 +73,7 @@ h1 {
 }
 .info .vento {
     flex: 1;
-    text-align: center;
+    text-align: center; 
 }
 .tempTitulo,
 .ventoTitulo {
