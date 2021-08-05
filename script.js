@@ -36,7 +36,7 @@ function showInfo(json) {
     document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`;
     document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>`;
 
-    document.querySelector('.tem img').setAttribute('src', `<img src="http://openweathermap.org/img/wn/${json.temIcon}@2x.png" />`)
+    document.querySelector('.temp img').setAttribute('src', `<img src="http://openweathermap.org/img/wn/${json.temIcon}@2x.png" />`)
 
 }
 
