@@ -4,6 +4,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
     const input = document.querySelector('#searchInput').value;
     
     if(input !== '') {
+        clearInfo();
         showWarning('Carregando...');
 
 
@@ -22,6 +23,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
                 windAngle: json.wind.deg,
             });
         } else {
+            clearInfo();
             showWarning('Não encontramos esta localização...')
         };
     };
@@ -39,6 +41,11 @@ function showInfo(json) {
     document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
     document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle-90}deg)`;
 }
+
+function clearInfo() {
+    showWarning(''); // remover aviso
+    document.querySelector('.resultado').style.display = 'none'; // ocultar os reultados
+};
 
 function showWarning(msg) {
     document.querySelector('.aviso').innerHTML = msg;
