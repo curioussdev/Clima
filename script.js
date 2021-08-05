@@ -11,6 +11,8 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
 
         const results = await fetch(url);
         const json = await results.json();
+
+        console.log(json)
     };
 
     
