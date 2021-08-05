@@ -10,6 +10,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         const url = `api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=${process.env.APP_WEATHER_API_KEY}&units=metric&lang=pt_br`;
 
         const results = await fetch(url);
+        const json = await results.json();
     };
 
     
