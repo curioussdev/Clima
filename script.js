@@ -7,10 +7,10 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         showWarning('Carregando...');
 
 
-        const url = `api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=0a84118ed59203ff29a1862eeb400753&units=metric&lang=pt_br`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=0a84118ed59203ff29a1862eeb400753&units=metric&lang=pt_br`;
 
-        const results = await fetch(url);
-        const json = await results.json();
+        let results = await fetch(url);
+        let json = await results.json();
 
         console.log(json)
     };
