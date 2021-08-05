@@ -1,4 +1,4 @@
-document.querySelector('.busca').addEventListener('submit', (event) => {
+document.querySelector('.busca').addEventListener('submit', async (event) => {
     event.preventDefault(); // previnir evento padrão (mantem as informações no formulário ao submeter)
 
     const input = document.querySelector('#searchInput').value;
