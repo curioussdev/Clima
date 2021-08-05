@@ -13,14 +13,19 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         let json = await results.json();
 
         if(json.cod === 200) {
-
+            showInfo({
+                
+            });
         } else {
             showWarning('Não encontramos esta localização...')
-        }
+        };
     };
 
-    
 });
+
+function showInfo(json) {
+
+}
 
 function showWarning(msg) {
     document.querySelector('.aviso').innerHTML = msg;
